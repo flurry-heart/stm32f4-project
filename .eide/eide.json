@@ -1,0 +1,133 @@
+{
+  "name": "Template",
+  "type": "ARM",
+  "dependenceList": [],
+  "srcDirs": [
+    "Application",
+    "Driver",
+    "Toolkit",
+    "Middleware",
+    "SDK"
+  ],
+  "virtualFolder": {
+    "name": "<virtual_root>",
+    "files": [],
+    "folders": []
+  },
+  "outDir": "Output",
+  "deviceName": "STM32F407ZGTx",
+  "packDir": ".pack/Keil/STM32F4xx_DFP.2.15.0",
+  "miscInfo": {
+    "uid": "00c8d30294b5e66ad8fdaf20f106ff2f"
+  },
+  "targets": {
+    "Debug": {
+      "excludeList": [],
+      "toolchain": "GCC",
+      "compileConfig": {
+        "cpuType": "Cortex-M4",
+        "floatingPointHardware": "single",
+        "scatterFilePath": ".\\SDK\\STM32F407ZGTx_FLASH.ld",
+        "useCustomScatterFile": true,
+        "storageLayout": {
+          "RAM": [],
+          "ROM": []
+        },
+        "options": "null"
+      },
+      "uploader": "STLink",
+      "uploadConfig": {
+        "bin": "",
+        "proType": "SWD",
+        "resetMode": "default",
+        "runAfterProgram": true,
+        "speed": 4000,
+        "address": "0x08000000",
+        "elFile": "None",
+        "optionBytes": ".eide/debug.st.option.bytes.ini",
+        "otherCmds": ""
+      },
+      "uploadConfigMap": {
+        "JLink": {
+          "bin": "",
+          "baseAddr": "",
+          "cpuInfo": {
+            "vendor": "null",
+            "cpuName": "null"
+          },
+          "proType": 1,
+          "speed": 8000,
+          "otherCmds": ""
+        },
+        "STLink": {
+          "bin": "",
+          "proType": "SWD",
+          "resetMode": "default",
+          "runAfterProgram": true,
+          "speed": 4000,
+          "address": "0x08000000",
+          "elFile": "None",
+          "optionBytes": ".eide/debug.st.option.bytes.ini",
+          "otherCmds": ""
+        },
+        "OpenOCD": {
+          "bin": "",
+          "target": "stm32f4x",
+          "interface": "cmsis-dap",
+          "baseAddr": "0x08000000"
+        }
+      },
+      "custom_dep": {
+        "name": "default",
+        "incList": [
+          "Application/Inc",
+          "Driver/Device",
+          "Toolkit",
+          "SDK/CMSIS/Device/ST/STM32F4xx/Include",
+          "SDK/CMSIS/Include",
+          "Driver/Peripheral/Inc",
+          "Middleware",
+          "SDK/STM32F4xx_HAL_Drive_V1.28.0/Inc",
+          "SDK/STM32F4xx_HAL_Drive_V1.28.0/Inc/Legacy",
+          "Middleware/FatFs-R0.15a",
+          "Middleware/ioLibrary_Driver-V3.2.0/Ethernet",
+          "Middleware/ioLibrary_Driver-V3.2.0/Internet"
+        ],
+        "libList": [],
+        "defineList": [
+          "STM32F407xx",
+          "USE_HAL_DRIVER",
+          "USE_FULL_LL_DRIVER"
+        ]
+      },
+      "builderOptions": {
+        "GCC": {
+          "version": 5,
+          "beforeBuildTasks": [],
+          "afterBuildTasks": [],
+          "global": {
+            "$float-abi-type": "softfp",
+            "output-debug-info": "enable",
+            "misc-control": "--specs=nosys.specs --specs=nano.specs"
+          },
+          "c/cpp-compiler": {
+            "language-c": "c11",
+            "language-cpp": "c++11",
+            "optimization": "level-debug",
+            "warnings": "all-warnings",
+            "one-elf-section-per-function": true,
+            "one-elf-section-per-data": true
+          },
+          "asm-compiler": {},
+          "linker": {
+            "output-format": "elf",
+            "remove-unused-input-sections": true,
+            "LIB_FLAGS": "-lm",
+            "$toolName": "auto"
+          }
+        }
+      }
+    }
+  },
+  "version": "3.5"
+}
