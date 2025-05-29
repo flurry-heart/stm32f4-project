@@ -1,1 +1,1 @@
-这是使用 GCC 编译的 STM32F407ZGT6 的程序，例程可以参考：https://www.yuque.com/star-light-glimmer/stm32
+这是使用 GCC 编译的 STM32F407ZGT6 的程序，例程可以参考博客：https://www.yuque.com/star-light-glimmer/stm32
